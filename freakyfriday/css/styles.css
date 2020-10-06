@@ -95,7 +95,7 @@ body {
 }
 .description > h2 {
     font-family: 'Sansita Swashed', cursive;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 5.8rem;
 }
 #main-description > p {
@@ -105,7 +105,7 @@ body {
 /*PRODUCT PAGE*/
 .description > h3 {
     font-family: 'Sansita Swashed', cursive;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: 0.6rem;
     margin-bottom: 5rem;
 }
@@ -225,7 +225,11 @@ td, th {
 }
 tbody tr:nth-child(odd) {
     background: rgb(243, 212, 191);
-  }
+}
+
+#final-row {
+    background: rgb(223, 185, 160)
+}
 
 #payment {
     position: relative;
@@ -326,11 +330,5 @@ tbody tr:nth-child(odd) {
     content: "\2BC6";
 }
 
-/*To do list:
-Add active dropdown in the relevant pages
-Add buttons to the products
-Add organic logo
-Add basket page
-Add payment page*/
 
 /******End of Main*******/
