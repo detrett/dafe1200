@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/7918846ba0.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <title>FoodShare</title>
+    <!--Chevron made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
+</head>
+
+<body>
+    <!--Start of header-->
+    <header>
+        <nav class="visible-lg">
+            <!--Start container-->
+            <div class=container>
+                <div id=logo-header>
+                    <a href="index.html">
+                        <div id=logo-image></div>
+                    </a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span>
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="locations.html">
+                                <span>
+                                    Locations
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <span>
+                                    Contact
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="wrap" class="profile-stuff">
+                    <a href="profile.html" class="active">
+                        <i class="fas fa-user-circle"></i>
+                        <span>My Profile</span>
+                    </a>
+                </div>
+
+                <button class="visible-sm collapsible">
+
+
+
+
+            </div>
+            <!--End container-->
+        </nav>
+
+        <nav class="visible-sm">
+            <!--Start container-->
+            <div class=container>
+                <div id=logo-header>
+                    <a href="index.html">
+                        <div id=logo-image></div>
+                    </a>
+                </div>
+
+                <div id="wrap" class="profile-stuff">
+                    <a href="profile.html" class="active">
+                        <i class="fas fa-user-circle"></i>
+                        <span>My Profile</span>
+                    </a>
+                </div>
+
+                <button class="visible-sm collapsible">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="active">
+                                <span>
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="locations.html">
+                                <span>
+                                    Locations
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <span>
+                                    Contact
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+            </div>
+            <!--End container-->
+        </nav>
+    </header>
+    <!--End of header-->
+
+    <!--Start of main content-->
+    <div class="container visible-lg">
+        <!--Start of row-->
+        <form action="./registerPoints.php">
+            <div>
+                <label for="descFood"> Description of food given </label>
+                <textarea name="descFood">
+
+                </textarea>
+
+            </div>
+            <div>
+                <label for="givenPoints">Points to give </label> <input class="highlighted-description" type="text">
+                </input>
+            </div>
+
+            <div>
+                <p class="question"> Do you want to get the voucher right away or add the points to the account? </p>
+                <input type="radio" id="voic1" name="wantPromo" value="0"></input>
+                <label for="voic1">Get voucher right away</label>
+                <input type="radio" id="voic2" name="wantPromo" value="1"></input>
+                <label for="voic2">Add the points to the account</label>
+
+            </div>
+            <div class="submit-btn">
+                <button id="join" class="mid-btn">Submit!</button>
+            </div>
+            <div id="back">
+                <a href="profile.html">
+                    <i class="fas fa-chevron-circle-left"></i>
+                    <span>Back to profile</span>
+                </a>
+            </div>
+        </form>
+    </div>
+    <div class="container visible-sm foodreg">
+        <!--Start of row-->
+        <form action="./registerPoints.php">
+            <div>
+                <label for="descFood"> Description of food given </label>
+                <textarea name="descFood">
+
+                        </textarea>
+
+            </div>
+            <div>
+                <label for="givenPoints">Points to give </label> <input class="highlighted-description" type="text">
+                </input>
+            </div>
+
+            <div>
+                <p> Do you want to get the voucher right away or add the points to the account? </p>
+                <input type="radio" id="voic1" name="wantPromo" value="0"></input>
+                <label for="voic1">Get voucher right away</label>
+                <input type="radio" id="voic2" name="wantPromo" value="1"></input>
+                <label for="voic2">Add the points to the account</label>
+
+            </div>
+            <div>
+                <div class="submit-btn">
+                    <button id="join" class="mid-btn">Submit!</button>
+                </div>
+            </div>
+            <div id="back">
+                <a href="profile.html">
+                    <i class="fas fa-chevron-circle-left"></i>
+                    <span>Back to profile</span>
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+
+<!--Script-->
+<script src="script/script.js"></script>
+
+</html>
