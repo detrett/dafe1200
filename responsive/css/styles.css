@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #ffffff;
+    position: relative;
+    height: 100%;
+}
+
+/*Header stuff - for the logo*/
+.container {
+    width: 100%;
+    height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo-container {
+    max-width: 200px;
+    margin: 0 auto;
+}
+#logo-image {
+    background-image: url(../images/innovation.png);
+    height: 160px;
+    width: 200px;
+    display: block;
+}
+/*End of header stuff for the logo*/
+
+/*Header stuff - for the navbar*/
+.sub-container {
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(168,248,246,1) 100%);
+}
+
+.menu {
+    width: 35%;
+    margin: 0 auto;
+}
+.menu > ul {
+    list-style: none;
+}
+.menu > ul > li {
+    width: 25%;
+    float: left;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding-top: 27px;
+    text-align: center;
+}
+.menu > ul > li > a:active {
+    color: #3E54D3;
+}
+/*End of header stuff - for the navbar*/
+
+/*Main content*/
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 60px;
+}
+
+#innovation-image-container {
+    width: 60%;
+    margin-top: 80px;
+    margin: 0 auto;
+}
+#camp-image {
+    background-image: url(../images/camp.jpeg);
+    max-width: 100%;
+    height: auto;
+}
+
+#chevron-container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#chevron-image {
+    max-width: 10%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#line-container {
+    max-width: 75%;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 60px;
+    height: 9px;
+    border-bottom: 1px solid #4FE0B6;
+    -moz-box-shadow: 0px 5px 7px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 7px -4px rgba(0,0,0,0.75);
+}
+
+.box {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    display: -ms-flexbox;
+    padding-bottom: 80px;
+    align-items: center;
+}
+
+.circle{
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    background: #15CDCA;   
+    box-shadow: -2px 4px 45px rgba(0, 0, 0, 0.13);
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+.info-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.6em;
+    margin-left: 50px;
+    align-items: center;
+    display: flex;
+    display: -ms-flexbox;
+    text-align: justify;
+}
+#left {
+    margin-left: 0px;
+    margin-right: 50px;
+}
+#when {
+    font-size: 2em;
+}
+#why {
+    font-size: 2em;
+}

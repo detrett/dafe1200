@@ -1,24 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> <!--Open Sans & Open Sans Condensed-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <!--Open Sans & Open Sans Condensed-->
     <link rel="stylesheet" href="css/styles.css">
     <title>Innovation Nation</title>
 </head>
+
 <body>
     <!--Start of header-->
     <header>
         <nav>
-
+            <div class="container">
+                <div id="logo-container">
+                    <a href="index.html">
+                        <div id="logo-image"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="sub-container">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Schedule
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <!--End of header-->
-    <!--Start of Main Content-->
-    <div>
 
+    <!--Start of Main Content-->
+    <div class="container">
+        <!--Start of row-->
+        <div class="row">
+            <!--Image-->
+            <div id="innovation-image-container">
+                <img id="camp-image" src="images/camp.jpeg" alt="Image of a sustainable city">
+            </div>
+            <!--End of image-->
+        
+            <!--Chevron and line-->
+            <div id="chevron-container">
+                <a href="#start">
+                    <img id="chevron-image" src="images/chevron.png" alt="">
+                </a> 
+            </div>
+            <div id="line-container">
+            </div>
+            <!--End of Chevron and line-->
+
+            <!--Start of circles and info-->
+            <div class="box">
+                <div>
+                    <span id="start" class="circle">What</span>
+                </div>
+                <div class="info-description">
+                    <h1>Innovation Nation is an organization that arranges innovation camps revolving around frugality. We provide participants with a professional step by step experience in the world of frugal innovation.</h1>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="info-description" id="left">
+                    <h2 id="when">Every year during the summer we organize intense 3-day long camps every two weeks. For detailed information visit the Schedule section of our website.</h2>
+                </div>
+                <div>
+                    <span class="circle">When</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <div>
+                    <span id="start" class="circle">Why</span>
+                </div>
+                <div class="info-description">
+                    <h3 id="why">We want to create an environment that pushes participants to learn about the benefits of frugal innovation. We believe in the benefits of our teachings and the experience we provide.</h3>
+                </div>
+            <!--End of circles and info-->
+        </div>
+        <!--End of row-->
     </div>
+
     <!--End of Main Content-->
 </body>
+
 </html>
