@@ -45,6 +45,7 @@ body{
 .menu {
     width: 35%;
     margin: 0 auto;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 .menu > ul {
     list-style: none;
@@ -52,10 +53,11 @@ body{
 .menu > ul > li {
     width: 25%;
     float: left;
-    font-family: 'Open Sans Condensed', sans-serif;
+    
     font-size: 1.2em;
     font-weight: 600;
     padding-top: 27px;
+    padding-left: 5px;
     text-align: center;
 }
 .menu > ul > li > a:active {
@@ -147,3 +149,109 @@ body{
 #why {
     font-size: 2em;
 }
+
+
+/*SCHEDULE*/
+
+.schedule-image-container {
+    max-width: 70%;
+    margin: 0 auto;
+}
+#dayone {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#days{
+    margin: 100px;
+}
+.title {
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-bottom: 15px;
+    background-color: #15CDCA;
+}
+.firstrow {
+    padding-top: 25px;
+}
+.lastrow {
+    padding-bottom: 25px;
+}
+table {
+    margin: 0 auto;
+}
+tr {
+    width: 100%;
+}
+.days-table{
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    width: 50%;
+    
+}
+
+.table-container {
+    width: 80%; 
+    margin: 0 auto;
+}
+.table-container > table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+    border-bottom: 2px solid #4F80E2;;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+     0px 10px 20px rgba(0,0,0,0.05),
+     0px 20px 20px rgba(0,0,0,0.05),
+     0px 30px 20px rgba(0,0,0,0.05);
+}
+
+.table-container th {
+    color: #4F80E2;
+    font-size: 2em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+}
+.table-container tr {
+    text-align: center;
+}
+.table-container tr td {
+    padding-top: 20px;
+}
+
+@media (min-width: 881px) {
+	.col-lg-4{
+		float: left;
+		width: 31.2%;
+        margin: 1%;
+        min-height: 200px;
+        margin-bottom: 80px;
+        border-bottom: 2px solid #15CDCA;
+	}
+}
+
+@media (max-width: 880px) {
+	.col-sm-12{
+		float: left;
+		width: 98%;
+        margin: 1%;
+        min-height: 150px;
+        margin-bottom: 50px;
+        border-bottom: 2px solid #15CDCA;
+    }
+    
+    .table-container th {
+        font-size: 1em;
+    }
+    .table-container {
+        width: 100%; 
+        margin: 0 auto;
+    }
+    #days {
+        margin: 50px;
+    }
+}
+
