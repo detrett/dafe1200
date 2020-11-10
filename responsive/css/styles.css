@@ -55,8 +55,8 @@ body::before {
 }
 #logo-image {
     background-image: url(../images/innovation.png);
-    height: 160px;
-    width: 200px;
+    max-width: 100%;
+    height: 400px; 
     display: block;
 }
 /*End of header stuff for the logo*/
@@ -148,11 +148,14 @@ body::before {
     align-items: center;
 }
 
+
 .circle{
     height: 125px;
     width: 125px;
     border-radius: 50%;
-    background: #15CDCA;   
+    background: #15CDCA; 
+    color: white;
+    text-shadow: 3px 3px 0px#3E54D3;  
     box-shadow: -2px 4px 45px rgba(0, 0, 0, 0.13);
     display: flex;
     display: -ms-flexbox;
@@ -255,6 +258,27 @@ tr {
     padding-top: 20px;
 }
 
+.contactButton {
+    border-radius:15px;
+    border:2px solid #4F80E2;;
+    padding: 10px 40px;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+}
+.contactButton:hover, .contactButton:focus {
+    background-color: #4F80E2;;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.buttonContainer {
+    width: 10%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+/*END OF SCHEDULE*/
+
+/*MEDIA*/
 @media (min-width: 881px) {
 	.col-lg-4{
 		float: left;
