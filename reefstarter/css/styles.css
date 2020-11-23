@@ -1,0 +1,79 @@
+/*BODY*/
+body{
+    background-color: #F8FDFF;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: helvetica;
+    font-weight: lighter;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width:880px){
+    .body{
+      width: 100%;
+      margin-left: 0%;
+      background-color: #f1f1f1;
+      color: black;
+    }
+  }
+  
+  /* Hidden skip link */
+  .skip-link {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background:#0B7875;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
+  
+  
+  /****START HEADER****/
+  .nav-container {
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #0B7875;
+  }
+  
+  .navbar{
+    /* margin-top: 10px;
+    margin-right: 10%;
+    float: right;
+    color:black; */
+  }
+  
+  /*List styles*/
+  .navbar ul {
+    list-style: none;
+  }
+  .navbar ul li {
+    float: right;
+  }
+  
+  /*Link styles*/
+  .navbar a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  @media only screen and (max-width:880px){
+    .navbar a {
+      padding: 0px;
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+  }
+  .navbar a:hover {
+    color: #0B7875;
+  }
+  /****END HEADER****/
