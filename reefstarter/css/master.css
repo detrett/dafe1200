@@ -18,6 +18,12 @@ body {
   position: relative;
 }
 
+/*General properties*/
+.text-center {
+  text-align: center;
+}
+
+
 /* Hidden skip link */
 .skip-link {
   position: absolute;
@@ -56,8 +62,11 @@ body {
 }
 
 #logo-container {
-  max-width: 150px;
+  max-width: 350px;
   float: left;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
 }
 
 #logo-image{
@@ -66,6 +75,13 @@ width: 150px;
 height: 150px;
 display: block;
 }
+#logo-name-image{
+  background: url(../images/reefstarter-logo.png) no-repeat;
+  width: 200px;
+  height: 75px;
+  display: block;
+  }
+  
 
 /*List styles*/
 .navbar ul {
@@ -107,6 +123,10 @@ display: block;
   margin-bottom: 50px;
 }
 
+.text-center p {
+  padding-bottom: 50px;
+}
+
 /*Paragraph styling*/
 h2 + p, h3 + p, h4 + p {
   margin-top: 15px;
@@ -144,18 +164,18 @@ h1 + hr{
 
 
 
-/*Images*/
+/*Small Images*/
 .images {
   width: 100%;
-  display: flex;
-  display: -ms-flexbox;
-  justify-content: center;
+  text-align: center;
 }
 
-.image-container{
-  margin-top: 100px;
-  padding: 0 4% 0 4%;
-  width:25%;
+.lg-4{
+  float: left;
+	width: 31.2%;
+  margin: 1%;
+  min-height: 150px;
+  padding-bottom: 45px;
 }
 
 #clownfish, #turtle, #moray{
@@ -164,7 +184,71 @@ h1 + hr{
  border-radius: 50%;
 }
 
+.tooltip:hover i {
+  display: none;
+}
+
+.tooltip:hover #turtle{
+  border: 5px solid #D5E7EF;
+  transform: scale(1.75);
+  transition-duration: .25s;
+  z-index: 9;
+}
+.tooltip:hover #moray {
+  border: 5px solid rgba(94, 44, 55, 0.8);
+  transform: scale(1.75);
+  transition-duration: .25s;
+}
+.tooltip:hover #clownfish {
+  border: 5px solid rgba(118, 136, 79, 0.8);
+  transform: scale(1.75);
+  transition-duration: .25s;
+}
+
 img + span {
+  font-size: 0.8em;
+}
+img + i {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/*Tooltips for the images*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+.tooltip .content {
+  min-width: 300px;
+  position: absolute;
+  top: 150px;
+  right: 50%;
+  transform: translate(50%,0);
+  display: none;
+  border-radius: 5px;
+  background-color: #D5E7EF;
+  opacity: 0.9;
+  padding: 20px 15px;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.tooltip:hover .content {
+  display: block;
+}
+.tooltip:focus .content  {
+  display: block;
+}
+
+.content span{
+  font-weight: 600;
+}
+.content p {
+  margin-top: 10px;
   font-size: 0.8em;
 }
 
@@ -212,13 +296,14 @@ img + span {
   background: rgba(70, 148, 196, 0.50);
   opacity: 0.5;
   visibility: hidden;
-  transition: opacity .25s, visibility .25s;
+  transition: opacity .3s, visibility .15s;
 }
 
 .image-container-lg:hover .img-description {
   visibility: visible;
   opacity: 1;
 }
+
 
 /*second larger image*/
 #samoa-2{
@@ -229,37 +314,81 @@ img + span {
 /****END MAIN CONTENT****/
 
 
-/*Footer*/
-footer{
-  padding-top: 30px;
+/*End content*/
+.end-content {
+  margin-top: -70px;
   height: 250px;
+  text-align: center;
 }
-footer a{
-  display: flex;
-  justify-content: center;
+
+/*Guide*/
+#guide-link-container {
+margin-bottom: 40px;
+}
+
+#guide-link {
+background-color:#F8FDFF;
+color: #e4868d;
+padding: 5px 20px;
+border: 2px solid #e4868d;
+border-radius: 3px;
+cursor: pointer;
+font-family: 'Noto Sans JP', sans-serif;
+text-align: center;
+margin: auto;
+margin-bottom: 40px;
+}
+#guide-link:hover {
+  color:  #0B7875;
+  border-color:  #0B7875;
+  transition: 0.2s linear;
+}
+#guide-link:active {
+  background-color:  #0B7875;
+  position: relative;
+  top: 1px;
+  transition: 0.1s linear;
+  color: #F8FDFF;
+}
+
+
+/*Links*/
+ #source-link {
+  display: inline;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  color:  #e4868d;
+  text-align: center;
+  font-weight: 500;
+}
+
+#source-link:hover{
+  color: #0B7875;
   text-decoration: underline;
-  color: black;
-  text-align: center;
-}
-footer a:hover{
-  color: blue;
-}
-footer p{
-  text-align: center;
 }
 /*End of footer*/
 
 
 
 /*********MEDIA********/
-@media (min-width: 980px) and (max-width: 1300px) {
+@media (min-width: 880px) and (max-width: 1300px) {
   .main-header {
     font-size: 1.5em;
   }
 }
 
 
-@media (min-width: 680px) and (max-width: 980px) {
+@media (min-width: 680px) and (max-width: 880px) {
+  .navbar {
+    text-align: right;
+  }
+  .navbar ul {
+    padding-top: 20px;
+  }
+  .navbar ul li {
+    float: none;
+  }
   .image-container-lg{
     height: 325px;
   }
@@ -271,6 +400,9 @@ footer p{
 @media (max-width: 680px) {
   .navbar {
     text-align: right;
+  }
+  .navbar ul {
+    padding-top: 20px;
   }
   .navbar ul li {
     float: none;
@@ -284,5 +416,23 @@ footer p{
   }
   .image-container-lg{
     height: 325px;
+  }
+
+  .sm-hide {
+    display: none !important;
+  }
+  .sm-6 {
+    float: left;
+    width: 48%;
+    margin: 1%;
+    min-height: 150px;
+  }
+  .sm-12 {
+    float: left;
+		width: 98%;
+    margin: 1%;
+    min-height: 150px;
+    padding-top: 30px;
+    padding-bottom: 45px;
   }
 }
