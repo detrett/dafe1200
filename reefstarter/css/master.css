@@ -14,13 +14,19 @@ body {
   font-weight: lighter;
   font-size: 1.2rem;
   line-height: 1.5;
-  height: 100%;
+  min-height: 100%;
   position: relative;
+}
+html {
+  height: 100%;
 }
 
 /*General properties*/
 .text-center {
   text-align: center;
+}
+.active {
+ color: #0B7875;
 }
 
 
@@ -88,6 +94,7 @@ display: block;
   padding-top: 50px;
   list-style: none;
   font-family: 'Noto Sans JP', sans-serif;
+  text-shadow: 0px 0px 7px rgba(150, 150, 150, 1);
   font-weight: 500;
 }
 .navbar ul li {
@@ -318,7 +325,7 @@ img + i {
 /*End content*/
 .end-content {
   margin-top: -70px;
-  height: 250px;
+  height: 200px;
   text-align: center;
 }
 
@@ -373,6 +380,8 @@ box-shadow:0 1px 8px rgba(167, 114, 114, 0.8);
 /******************************* END OF MISSION STYLES ***********************/
 /******************************* START OF SOURCE STYLES **********************/
 .source-page {
+  position: relative;
+  min-height: 100vh;
   width: 100%;
   margin-top: 50px;
   padding: 50px 8%;
@@ -393,6 +402,7 @@ input {
   display: none;
 }
 label {
+  position: relative;
   display: block;
   cursor: pointer;
   background-color: #0B7875;
@@ -404,6 +414,19 @@ label {
 }
 label:hover {
   background-color: rgb(228, 113, 122);
+}
+/*Arrow down*/
+label::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f107';
+  font-weight: bold;
+  position: absolute;
+  top: 12px;
+  right: 24px;
+}
+/*Arrow up*/
+input:checked + label::after {
+  content:'\f106';
 }
 
 .acc-content {
@@ -420,9 +443,9 @@ input + label + .acc-content {
   transition: ease-in-out .5s;
   padding: 0px 25px;
 }
-input:checked + label + .acc-content {
+input:checked + label + .info-content {
   opacity: 1;
-  height: 580px;
+  height: 760px;
   font-size: 1em;
   padding: 45px 25px;
 }
@@ -432,27 +455,61 @@ input:checked + label + .image-list {
   font-size: 1em;
   padding: 45px 25px;
 }
+input:checked + label + .design-list {
+  opacity: 1;
+  height: 600px;
+  font-size: 1em;
+  padding: 45px 25px;
+}
 input:checked + label + .group-list {
   opacity: 1;
-  height: 230px;
+  height: 300px;
   font-size: 1em;
   padding: 45px 25px;
 }
 
-.acc-icon {
-  min-width: 30px;
 
+/*Fixes weird interaction with images inside accordion*/
+input + label + .image-list div {
+  display: none;
 }
 
-#download {
+input:checked + label + .image-list div {
+  display: block;
+}
+input + label + .design-list div {
+  display: none;
+}
+
+input:checked + label + .design-list div {
+  display: block;
+}
+
+.acc-icon {
+  min-width: 30px;
+}
+.acc-icon-2 {
+  min-width: 15px;
+  padding-left: 5px;
+}
+
+#download{
   display: block;
   margin: 40px 0px 30px;
   text-decoration: underline;
   color: #293A4C;
   font-weight: 600;
   }
+ .src-link {
+  text-decoration: underline;
+  color: #293A4C;
+  font-weight: 600;
+}
+#download:hover, #fas:hover {
+  color:  rgb(208, 93, 103);
+}
 
-.sources-list ul {
+.sources-list ul, .design-list ul {
   list-style: none;
 
 }
@@ -464,8 +521,8 @@ input:checked + label + .group-list {
 }
 .sources-list ul li a:hover{ 
   display: block;
-  transform: translate(10px);
-  transition: linear 0.2s;
+  transform: translate(6px);
+  transition: linear 0.1s;
 }
 
 .acc-content hr {
@@ -473,7 +530,7 @@ input:checked + label + .group-list {
   border: 0;
   height: 1px;
   background: #000000;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
 
 /*Gallery*/
@@ -487,6 +544,33 @@ input:checked + label + .group-list {
 .image-tile:hover {
   box-shadow: 0 1px 5px 1px #293A4C;
 }
+.image-tile img {
+  width: 200px;
+  height: 200px;
+}
+.image-tile i {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 20px;
+  color: white;
+  opacity: 0.8;
+  font-size: 0.8em;
+}
+/*Design*/
+.design-list ul li{
+ float: left;
+ padding: 30px 15px;
+}
+
+.design-image {
+  display: block;
+  padding: 20px 40px;
+}
+.cleared {
+  clear: both;
+}
+
 
 /*Group*/
 .group-list ul {
@@ -502,7 +586,47 @@ input:checked + label + .group-list {
   margin: 1%;
 }
 
+/*****FOOTER******/
+.panel-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 289px;
+  background-color:#b3d3e2;
+  border: 10px solid transparent;
+  border-image-slice: 83 0 0 0;
+  border-image-width: 13px 0px 20px 0px;
+  border-image-outset: 7px 0px 0px 0px;
+  border-image-repeat: stretch repeat; 
+  border-image-source: url(../images/line.png);
+}
+.panel-footer div {
+  margin-top: 60px;
+  text-align: center;
+}
+.reef {
+  width: 100%;
+  height: 100px;
+  background-image: url(../images/reef.png);
+  transform: scale(0.99);
+}
+#sdg-link {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  color: #293A4C;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-shadow: 0px 0px 7px rgb(220, 211, 211);
+}
+#sdg-link:hover {
+  display: block;
+  transform: translate(6px);
+  transition: linear 0.1s;
+}
+
 /*********MEDIA********/
+
+/*Medium-large*/
 @media (min-width: 880px) and (max-width: 1040px) {
   .c-md-6 {
     float: left;
@@ -517,7 +641,7 @@ input:checked + label + .group-list {
   }
 }
 
-
+/*Small-medium*/
 @media (min-width: 680px) and (max-width: 880px) {
   .navbar {
     text-align: right;
@@ -534,19 +658,29 @@ input:checked + label + .group-list {
   .main-header {
     font-size: 1.3em;
   }
+
+
   /*Sources*/
-  input:checked + label + .acc-content {
+  input:checked + label + .info-content {
     opacity: 1;
-    height: 780px;
+    height: 900px;
     font-size: 1em;
     padding: 15px 25px;
   }
+  /*Images*/
   input:checked + label + .image-list {
     opacity: 1;
     height: 3000px;
     font-size: 1em;
     padding: 45px 25px;
   }
+  input:checked + label + .design-list {
+    opacity: 1;
+    height: 700px;
+    font-size: 1em;
+    padding: 45px 25px;
+  }
+
   .c-sm-12 {
     float: left;
 		width: 98%;
@@ -554,7 +688,7 @@ input:checked + label + .group-list {
   }
 }
 
-
+/*Small*/
 @media (max-width: 680px) {
   .navbar {
     text-align: right;
@@ -594,24 +728,31 @@ input:checked + label + .group-list {
     padding-bottom: 45px;
   }
 
+
+
   /*Sources*/
-  input:checked + label + .acc-content {
+  input:checked + label + .info-content {
     opacity: 1;
-    height: 810px;
+    height: 1050px;
     font-size: 1em;
     padding: 15px 25px;
   }
+  /*Images*/
   input:checked + label + .image-list {
     opacity: 1;
     height: 3000px;
     font-size: 1em;
     padding: 45px 25px;
   }
-
+  input:checked + label + .design-list {
+    opacity: 1;
+    height: 1000px;
+    font-size: 1em;
+    padding: 45px 25px;
+  }
   .c-sm-12 {
     float: left;
 		width: 98%;
     margin: 1%;
   }
-
 }
