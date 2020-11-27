@@ -269,7 +269,7 @@ img + i {
   line-height: 2;
 }
 
-#color-bg {
+.color-bg {
   background-color: #D5E7EF;
 }
 
@@ -580,14 +580,17 @@ input:checked + label + .design-list div {
   padding-bottom: 10px;
 }
 
-.c-lg-4 {
+.f-left{
   float: left;
-	width: 31.2%;
-  margin: 1%;
+
+}
+.f-right {
+  float: right;
 }
 
 /*****FOOTER******/
 .panel-footer {
+  clear: both;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -624,8 +627,47 @@ input:checked + label + .design-list div {
   transition: linear 0.1s;
 }
 
+
+/*****GUIDE****/
+.banner-text {
+  padding: 50px 0px;
+}
+.how-to-design-img {
+  margin: auto;
+  width: fit-content;
+  padding-top: 75px;
+}
+.image-tile-2 {
+  height: 500px;
+  width: 400px;
+  position: relative;
+  margin: 0 auto 25px;
+  background-color: brown;
+}
+.c-lg-6 {
+  float: left;
+  width: 48%;
+  margin: 1%;
+}
+.image-area {
+  width: 80%;
+  margin-left: 10%;
+}
+
+#before-footer {
+  margin-bottom: 200px;
+}
+
 /*********MEDIA********/
 
+/*For the guide images*/
+@media (min-width: 1040px) and (max-width: 1400px) {
+  .c-md-12 {
+    float: left;
+		width: 98%;
+    margin: 1%;
+  }
+}
 /*Medium-large*/
 @media (min-width: 880px) and (max-width: 1040px) {
   .c-md-6 {
@@ -638,6 +680,13 @@ input:checked + label + .design-list div {
     height: 1600px;
     font-size: 1em;
     padding: 45px 25px;
+  }
+
+  /*Guide*/
+  .c-md-12 {
+    float: left;
+		width: 98%;
+    margin: 1%;
   }
 }
 
@@ -682,6 +731,13 @@ input:checked + label + .design-list div {
   }
 
   .c-sm-12 {
+    float: left;
+		width: 98%;
+    margin: 1%;
+  }
+
+  /*Guide*/
+  .c-md-12 {
     float: left;
 		width: 98%;
     margin: 1%;
@@ -754,5 +810,15 @@ input:checked + label + .design-list div {
     float: left;
 		width: 98%;
     margin: 1%;
+  }
+
+  /*Guide*/
+  .c-md-12 {
+    float: left;
+		width: 98%;
+    margin: 1%;
+  }
+  .image-tile-2 img {
+    transform: scale(0.8);
   }
 }

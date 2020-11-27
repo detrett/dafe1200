@@ -1,0 +1,191 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/*BODY*/
+body {
+  background-color: #F8FDFF;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  min-height: 100%;
+  position: relative;
+}
+html {
+  height: 100%;
+}
+
+/*General properties*/
+.text-center {
+  text-align: center;
+}
+.active {
+ color: #0B7875;
+}
+
+
+/* Hidden skip link */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background:#0B7875;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+}
+
+/*Line breaker*/
+.break {
+  display: block;
+}
+
+/****START HEADER****/
+.nav-container {
+  width: 100%;
+  height: 150px;
+  padding: 10px 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo-container {
+  max-width: 350px;
+  float: left;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+
+#logo-image{
+background: url(../images/logo.png) no-repeat;
+width: 150px;
+height: 150px;
+display: block;
+}
+#logo-name-image{
+  background: url(../images/reefstarter-logo.png) no-repeat;
+  width: 200px;
+  height: 75px;
+  display: block;
+  }
+  
+
+/*List styles*/
+.navbar ul {
+  padding-top: 50px;
+  list-style: none;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-shadow: 0px 0px 7px rgba(150, 150, 150, 1);
+  font-weight: 500;
+}
+.navbar ul li {
+  float: right;
+}
+
+/*Link styles*/
+.navbar ul li a {
+  vertical-align: middle;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar a:hover {
+  color: #0B7875;
+}
+
+/****END HEADER****/
+
+
+
+
+/****START MAIN****/
+.main-container{
+  width: 75%;
+  margin: auto;
+}
+#mainImg{
+  width:100%;
+}
+
+/*Section with three icons*/
+.section-icons{
+  height: 200px;
+}
+.section-icons h1{
+  text-align: center;
+}
+
+/*Text section*/
+.text-area{
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 125px;
+  padding-bottom: 125px;
+  line-height: 2;
+}
+.text-area p{
+  width: 60%;
+  margin-left: 20%;
+}
+
+/*How to design*/
+.how-to-design{
+  width: 60%;
+  margin-left: 20%;
+  padding: 55px 0 75px 0;
+}
+.how-to-design h2{
+  text-decoration: underline;
+}
+.how-to-design-img{
+  display: flex;
+  justify-content: center;
+}
+.how-to-design-img img{
+  width:100%;
+  height: auto;
+  padding-top: 50px;
+}
+
+
+/*How it works*/
+.how-it-works{
+  width:60%;
+  margin-left: 20%;
+  padding: 55px 0 75px 0;
+}
+.how-it-works h2{
+  text-decoration: underline;
+}
+.how-it-works-img{
+  display: flex;
+  justify-content: center;
+}
+.how-it-works-img img{
+  width: 40%;
+  height: 30%;
+  padding: 15px;
+}
+
+
+
+/****END MAIN****/
