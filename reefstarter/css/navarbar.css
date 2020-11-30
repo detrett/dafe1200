@@ -1,0 +1,182 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+header{
+}
+
+/*BODY*/
+body {
+  background-color: #F8FDFF;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  height: 100%;
+  position: relative;
+}
+
+/*General properties*/
+.text-center {
+  text-align: center;
+}
+
+
+/* Hidden skip link */
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  background:#0B7875;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+}
+
+/*Line breaker*/
+.break {
+  display: block;
+}
+
+/****START HEADER****/
+.nav-container {
+  width: 100%;
+  height: 150px;
+  padding: 10px 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo-container {
+  max-width: 350px;
+  float: left;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+
+#logo-image{
+background: url(images/logo.png) no-repeat;
+width: 150px;
+height: 150px;
+display: block;
+}
+#logo-name-image{
+  background: url(images/reefstarter-logo.png) no-repeat;
+  width: 200px;
+  height: 75px;
+  display: block;
+  }
+
+
+/*List styles*/
+.navbar ul {
+  padding-top: 50px;
+  list-style: none;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+}
+.navbar ul li {
+  float: right;
+}
+
+/*Link styles*/
+.navbar ul li a {
+  vertical-align: middle;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar a:hover {
+  color: #0B7875;
+}
+
+
+
+/*PAGE 3*/
+
+
+
+
+
+@media (min-width: 880px) and (max-width: 1300px) {
+  .main-header {
+    font-size: 1.5em;
+  }
+}
+
+
+@media (min-width: 680px) and (max-width: 880px) {
+  .navbar {
+    text-align: right;
+  }
+  .navbar ul {
+    padding-top: 20px;
+  }
+  .navbar ul li {
+    float: none;
+  }
+  .image-container-lg{
+    height: 325px;
+  }
+  .main-header {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 680px) {
+  .navbar {
+    text-align: right;
+  }
+  .navbar ul {
+    padding-top: 20px;
+  }
+  .navbar ul li {
+    float: none;
+  }
+  .text-area {
+    line-height: 1.75;
+    font-size: 0.8em;
+  }
+  .main-header {
+    font-size: 0.9em;
+  }
+  .image-container-lg{
+    height: 325px;
+  }
+
+  .sm-hide {
+    display: none !important;
+  }
+  .sm-6 {
+    float: left;
+    width: 48%;
+    margin: 1%;
+    min-height: 150px;
+  }
+  .sm-12 {
+    float: left;
+		width: 98%;
+    margin: 1%;
+    min-height: 150px;
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+}

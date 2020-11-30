@@ -28,6 +28,9 @@ html {
 .active {
  color: #0B7875;
 }
+.bold {
+  font-weight: bold;
+}
 
 
 /* Hidden skip link */
@@ -114,7 +117,90 @@ display: block;
 }
 /****END HEADER****/
 
+/**INDEX EXTRA STUFF*/
+.info-vectors {
+  width: 80%;
+  margin: auto;
+padding-top: 10%;
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+font-size: 23px;
+overflow: hidden;
+}
+.info-vector-container {
+  width: 100%;
+  background-color: #d4ecf4;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+#hlthy-coral, #semi-coral, #sad-coral {
+  padding-left: 25%;
+}
 
+#end-index {
+  background-color: #a1cce0;
+  overflow:hidden
+}
+.end-index-container {
+  width: 60%;
+  margin: auto;
+}
+.end-index-subcontainer {
+  text-align: justify;
+}
+.end-index-sub-subcontainer {
+  width: 300px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+
+.end-index-title {
+    line-height: 120px;
+    width: 120px;
+    background-color:#a1cce0;
+    color: #293A4C;
+    height: 120px;
+    border: 2px solid #293A4C;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+    box-shadow:0 1px 8px rgba(248, 246, 246, 0.8);
+}
+.end-index-title a {
+  font-weight: 600;
+  color:   #293A4C;
+}
+.end-index-title:hover {
+    color:  #fff;
+    border-color:  #fff;
+    transition: 0.2s linear;
+}
+.end-index-title:hover a{
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 1);
+  transition: .2s linear;
+}
+.end-index-title:active {
+  background-color:  #293A4C;
+  position: relative;
+  top: 1px;
+  transition: 0.05s linear;
+  color: #F8FDFF;
+}
+.end-index-title:active a{
+  color: #fff;
+}
+
+.margin-bottom {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+.margin-bottom p {
+  font-size: 1.5em;
+}
 
 /****START MAIN CONTENT****/
 .main-container{
@@ -170,7 +256,16 @@ h1 + hr{
   background-image: linear-gradient(to right,  #F8FDFF, #000000,#F8FDFF);
 }
 
-
+.first-image img {
+width: 100%;
+height: auto;
+}
+.chevron-down-2 {
+  margin: auto;
+display: block;
+margin-top: 100px;
+margin-bottom: 100px;
+}
 
 /*Small Images*/
 .images {
@@ -399,7 +494,10 @@ box-shadow:0 1px 8px rgba(167, 114, 114, 0.8);
 
 /*Accordion*/
 input {
-  display: none;
+  opacity: 0;
+}
+input:focus {
+  opacity: 1;
 }
 label {
   position: relative;
@@ -629,20 +727,22 @@ input:checked + label + .design-list div {
 
 
 /*****GUIDE****/
-.banner-text {
-  padding: 50px 0px;
-}
+/* .banner-text {
+  padding: 0px 0px;
+} */
 .how-to-design-img {
   margin: auto;
-  width: fit-content;
   padding-top: 75px;
 }
+.how-to-design-img img {
+  width: 100%;
+}
+
 .image-tile-2 {
-  height: 500px;
-  width: 400px;
+  height: 671px;
+  width: 364px;
   position: relative;
-  margin: 0 auto 25px;
-  background-color: brown;
+  margin: 0 auto;
 }
 .c-lg-6 {
   float: left;
@@ -656,6 +756,66 @@ input:checked + label + .design-list div {
 
 #before-footer {
   margin-bottom: 200px;
+}
+
+.section-icons {
+  margin: 150px auto;
+  width: max-content;
+}
+
+.bubble-tile {
+  position: relative;
+}
+
+.bubble-tile #b1{
+  position: absolute;
+  top: 50%; 
+  right: 58%;
+  transform: translate(50%,-50%);
+  font-size: 3em;
+  font-family: 'Open Sans';
+  color: #293A4C;
+}
+
+
+.bubble-tile #b2{
+  position: absolute;
+  top: 47%; 
+  right: 50%;
+  transform: translate(50%,-50%);
+  font-size: 3em;
+  font-family: 'Open Sans';
+  color: #293A4C;
+}
+#tile2 {
+  position: relative;
+  right: 20px;
+}
+
+
+.bubble-tile #b3{
+  position: absolute;
+  top: 53%; 
+  right: 58%;
+  transform: translate(50%,-50%);
+  font-size: 3em;
+  font-family: 'Open Sans';
+  color: #293A4C;
+}
+
+#tile1 span, #tile2 span, #tile3 span {
+  display: block;
+  text-align: center;
+  font-family: 'Noto Sans JP';
+  font-weight: 500;
+}
+
+.end-content-2 {
+  clear: both;
+  text-align: center;
+  margin-top: -70px;
+  margin-bottom: 300px;
+  font-size: 1.5em;
 }
 
 /*********MEDIA********/
@@ -745,7 +905,7 @@ input:checked + label + .design-list div {
 }
 
 /*Small*/
-@media (max-width: 680px) {
+@media (min-width: 479px) and (max-width: 680px) {
   .navbar {
     text-align: right;
   }
@@ -820,5 +980,33 @@ input:checked + label + .design-list div {
   }
   .image-tile-2 img {
     transform: scale(0.8);
+  }
+}
+
+/******* Super extra mega ultra small devices *******/
+@media (max-width: 479px) {
+  .c-xs-12 {
+    float: left;
+		width: 98%;
+    margin: 1%;
+  }
+
+  
+  .design-image {
+    display: block;
+    padding: 10px 5px;
+  }
+
+  input:checked + label + .info-content {
+    opacity: 1;
+    height: 1500px;
+    font-size: 1em;
+    padding: 15px 25px;
+  }
+  input:checked + label + .design-list {
+    opacity: 1;
+    height: 1400px;
+    font-size: 1em;
+    padding: 15px 25px;
   }
 }
