@@ -1007,7 +1007,7 @@ input:checked + label + .design-list div {
   margin: 1%;
 }
 .image-tile-2 img {
-  transform: scale(0.8);
+  transform: scale(0.7);
 }
   .design-image {
     display: block;
