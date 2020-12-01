@@ -986,6 +986,9 @@ input:checked + label + .design-list div {
 
 /******* Super extra mega ultra small devices *******/
 @media (max-width: 479px) {
+  .main-header {
+    font-size: 0.9em;
+  }
   .c-xs-12 {
     float: left;
 		width: 98%;
