@@ -83,6 +83,7 @@ background: url(../images/logo.png) no-repeat;
 width: 150px;
 height: 150px;
 display: block;
+margin-right: 30px;
 }
 #logo-name-image{
   background: url(../images/reefstarter-logo.png) no-repeat;
@@ -990,8 +991,24 @@ input:checked + label + .design-list div {
 		width: 98%;
     margin: 1%;
   }
+  .c-sm-12 {
+    float: left;
+    width: 98%;
+    margin: 1%;
+}
 
-  
+  .sm-hide {
+    display: none !important;
+  }
+ /*Guide*/
+ .c-md-12 {
+  float: left;
+  width: 98%;
+  margin: 1%;
+}
+.image-tile-2 img {
+  transform: scale(0.8);
+}
   .design-image {
     display: block;
     padding: 10px 5px;
@@ -1008,5 +1025,11 @@ input:checked + label + .design-list div {
     height: 1400px;
     font-size: 1em;
     padding: 15px 25px;
+  }
+  input:checked + label + .image-list {
+    opacity: 1;
+    height: 3000px;
+    font-size: 1em;
+    padding: 45px 25px;
   }
 }
